@@ -1,4 +1,5 @@
 import React from "react";
+import HighlightCard from "../components/HighlightCard/HighlightCard";
 import {
   Container,
   Header,
@@ -9,6 +10,7 @@ import {
   UserName,
   UserWrapper,
   PowerIcon,
+  HighlightCards,
 } from "./Dashboard.styles";
 
 const Dashboard = () => {
@@ -30,6 +32,31 @@ const Dashboard = () => {
           <PowerIcon />
         </UserWrapper>
       </Header>
+
+      <HighlightCards
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingLeft: 24 }}
+      >
+        <HighlightCard
+          title="Entrada"
+          amount="R$ 17.2382,00"
+          lastTransition="Ultima transação 8 de aghosto"
+          type="C"
+        />
+        <HighlightCard
+          title="Entrada"
+          amount="R$ 17.2382,00"
+          lastTransition="Ultima transação 8 de aghosto"
+          type="D"
+        />
+        <HighlightCard
+          title="Entrada"
+          amount="R$ 17.2382,00"
+          lastTransition="Ultima transação 8 de aghosto"
+          type="T"
+        />
+      </HighlightCards>
     </Container>
   );
 };
