@@ -1,6 +1,10 @@
 import styled from "styled-components/native";
 import { Feather } from "@expo/vector-icons";
 import { RFValue } from "react-native-responsive-fontsize";
+
+interface TypeProps {
+  type: "C" | "D";
+}
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.shape};
   border-radius: 5px;
@@ -13,10 +17,12 @@ export const Title = styled.Text`
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
-export const Amount = styled.Text`
+export const Amount = styled.Text<TypeProps>`
   font-size: ${RFValue(20)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
   margin-top: 2px;
+  color: ${({ type, theme }) =>
+    theme.colors[type === "C" ? "success" : "attention"]};
 `;
 
 export const Footer = styled.View`

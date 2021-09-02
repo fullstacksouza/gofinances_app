@@ -9,6 +9,7 @@ export interface Transaction {
   amount: string;
   category: Category;
   date: string;
+  type: "C" | "D";
 }
 
 export interface TransactionCardProps {

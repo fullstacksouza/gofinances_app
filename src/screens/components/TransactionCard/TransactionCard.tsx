@@ -13,14 +13,18 @@ import { TransactionCardProps } from "./TransactionCard.types";
 
 const categoryIcons: { [key: string]: string } = {
   vendas: "dollar-sign",
+  compras: "shopping-bag",
 };
 const TransactionCard = (props: TransactionCardProps) => {
   const { transaction } = props;
-  const { title, amount, category, date } = transaction;
+  const { title, amount, category, date, type } = transaction;
   return (
     <Container>
       <Title>{title}</Title>
-      <Amount>{amount}</Amount>
+      <Amount type={type}>
+        {type === "D" && "-"}
+        {amount}
+      </Amount>
       <Footer>
         <Category>
           <Icon name={categoryIcons[category.slugname]} />
