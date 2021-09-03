@@ -10,7 +10,7 @@ const TransactionTypeButton = (props: TransactionTypeButtonProps) => {
   const { title, type, selected, ...rest } = props;
   console.log(selected);
   return (
-    <Container selected={selected} {...rest}>
+    <Container type={type} selected={selected} {...rest}>
       <Icon name={icons[type]} />
       <Title selected={selected}>{title}</Title>
     </Container>
