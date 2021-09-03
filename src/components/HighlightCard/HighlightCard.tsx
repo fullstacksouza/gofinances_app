@@ -1,5 +1,5 @@
 import React from "react";
-import theme from "../../../global/styles/theme";
+import theme from "../../global/styles/theme";
 import {
   Container,
   Header,

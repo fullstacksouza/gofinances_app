@@ -14,6 +14,7 @@ import { TransactionCardProps } from "./TransactionCard.types";
 const categoryIcons: { [key: string]: string } = {
   vendas: "dollar-sign",
   compras: "shopping-bag",
+  alimentacao: "shopping-cart",
 };
 const TransactionCard = (props: TransactionCardProps) => {
   const { transaction } = props;

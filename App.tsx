@@ -9,6 +9,7 @@ import {
 import { ThemeProvider } from "styled-components";
 import Dashboard from "./src/screens/Dashboard/Dashboard";
 import theme from "./src/global/styles/theme";
+import Register from "./src/screens/Register/Register";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,7 +23,8 @@ export default function App() {
   }
   return (
     <ThemeProvider theme={theme}>
-      <Dashboard />
+      {/* <Dashboard /> */}
+      <Register />
     </ThemeProvider>
   );
 }

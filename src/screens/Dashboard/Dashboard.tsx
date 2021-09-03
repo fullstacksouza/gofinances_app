@@ -1,8 +1,8 @@
 import React from "react";
 import { getBottomSpace } from "react-native-iphone-x-helper";
-import HighlightCard from "../components/HighlightCard/HighlightCard";
-import TransactionCard from "../components/TransactionCard/TransactionCard";
-import { Transaction } from "../components/TransactionCard/TransactionCard.types";
+import HighlightCard from "../../components/HighlightCard/HighlightCard";
+import TransactionCard from "../../components/TransactionCard/TransactionCard";
+import { Transaction } from "../../components/TransactionCard/TransactionCard.types";
 import {
   Container,
   Header,
@@ -35,7 +35,7 @@ const Dashboard = () => {
       date: "22/08/2021",
       amount: "R$ 15.232,00",
       type: "D",
-      category: { name: "Alimentação", slugname: "vendas" },
+      category: { name: "Alimentação", slugname: "alimentacao" },
     },
     {
       id: "2367r",
